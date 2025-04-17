@@ -1,11 +1,11 @@
 <template>
   <div class="max-w-2xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
-      {{ $t('quiz.results') }}
+      Результаты
     </h2>
     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-8">
       <p class="text-2xl mb-4 text-gray-700 dark:text-gray-300">
-        {{ $t('quiz.score', { score: score, total: totalQuestions }) }}
+        Ваш счет: {{ score }} из {{ totalQuestions }}
       </p>
       <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
         <div
@@ -21,7 +21,7 @@
       to="/quiz"
       class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200"
     >
-      {{ $t('quiz.start') }}
+      Начать викторину
     </NuxtLink>
   </div>
 </template>

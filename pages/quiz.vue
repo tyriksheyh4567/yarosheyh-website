@@ -2,7 +2,7 @@
   <div class="max-w-2xl mx-auto">
     <div class="mb-8">
       <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
-        {{ $t('quiz.question', { current: currentQuestion + 1, total: questions.length }) }}
+        Вопрос {{ currentQuestion + 1 }} из {{ questions.length }}
       </h2>
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <p class="text-lg mb-6 text-gray-700 dark:text-gray-300">
@@ -32,7 +32,7 @@
         @click="previousQuestion"
         class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200"
       >
-        {{ $t('quiz.previous') }}
+        Предыдущий вопрос
       </button>
       <button
         v-if="currentQuestion < questions.length - 1"
@@ -40,7 +40,7 @@
         :disabled="selectedAnswer === null"
         class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {{ $t('quiz.next') }}
+        Следующий вопрос
       </button>
       <button
         v-else
@@ -48,7 +48,7 @@
         :disabled="selectedAnswer === null"
         class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {{ $t('quiz.finish') }}
+        Завершить
       </button>
     </div>
   </div>
